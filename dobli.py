@@ -17,7 +17,8 @@ if platform.python_version().split('.')[0] != '3':
     cetak('!m[!] يرجى استخدام Python 3.x لتشغيل هذا الكود.')
     sys.exit()
 
-import cookielib, re, urllib.request, urllib.parse, threading
+import http.cookiejar as cookielib  # استبدال cookielib بـ http.cookiejar
+import re, urllib.request, urllib.parse, threading
 try:
     import mechanize
 except ImportError:
